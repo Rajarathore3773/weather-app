@@ -39,3 +39,9 @@
 i {
   margin-right: 5px;
 }
+
+@media screen and (max-width: 600px){
+.box{
+  width: 328px;
+}
+}
