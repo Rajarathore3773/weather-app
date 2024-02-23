@@ -35,11 +35,13 @@ const Weather = () => {
                 setCity(event.target.value);
               }}
             />
-            <button className="searchButton" onClick={handleOnClick}>Search</button>
+            <button className="searchButton" onClick={handleOnClick}>
+              Search
+            </button>
           </div>
           {weatherinfo && (
-            <div className="info">
-              <h2 className="location">
+            <div>
+              <h2>
                 <i className="fa-solid fa-street-view"></i>
                 {weatherinfo?.name}
               </h2>
@@ -47,13 +49,12 @@ const Weather = () => {
                 <i class="fa-solid fa-cloud"></i>
                 {weatherinfo?.weather[0]?.description}
               </h3>
-              <h1 className="temp">
+              <h1>
                 <i class="fa-solid fa-temperature-three-quarters"></i>
                 {weatherinfo?.main?.temp}
               </h1>
               <h4>{`Humidity ${weatherinfo?.main?.humidity}`}</h4>
-              <h3 className="tempMin_Max">
-                {" "}
+              <h3>
                 {`Min Temp: ${weatherinfo?.main?.temp_min} | Max Temp: ${weatherinfo?.main?.temp_max}`}
               </h3>
             </div>
